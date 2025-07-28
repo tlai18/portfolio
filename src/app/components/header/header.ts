@@ -16,8 +16,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     { label: 'About', href: '#about', section: 'about' },
     { label: 'Skills', href: '#skills', section: 'skills' },
     { label: 'Projects', href: '#projects', section: 'projects' },
-    { label: 'Experience', href: '#experience', section: 'experience' },
-    { label: 'Contact', href: '#contact', section: 'contact' }
+    { label: 'Experience', href: '#experience', section: 'experience' }
   ];
 
   activeSection = 'home';

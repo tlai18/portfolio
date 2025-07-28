@@ -13,15 +13,15 @@
     </nav>
     <!-- Mobile Nav -->
     <div class="lg:hidden flex items-center">
-      <button (click)="toggleMenu()" class="focus:outline-none p-2">
+      <button (click)="toggleMenu()" class="focus:outline-none p-2 hamburger-button" [class.menu-open]="menuOpen">
         <span class="block w-6 sm:w-8 h-0.5 sm:h-1 bg-white mb-1.5 sm:mb-1 rounded transition-all duration-300" [class.rotate-45]="menuOpen" [class.translate-y-2]="menuOpen"></span>
         <span class="block w-6 sm:w-8 h-0.5 sm:h-1 bg-white mb-1.5 sm:mb-1 rounded transition-all duration-300" [class.opacity-0]="menuOpen"></span>
         <span class="block w-6 sm:w-8 h-0.5 sm:h-1 bg-white rounded transition-all duration-300" [class.-rotate-45]="menuOpen" [class.-translate-y-2]="menuOpen"></span>
       </button>
-      <div *ngIf="menuOpen" class="fixed inset-0 z-40 bg-black/90 backdrop-blur-sm flex flex-col items-center justify-center">
-        <nav class="flex flex-col items-center space-y-4 sm:space-y-6 bg-white/10 backdrop-blur-md px-4 sm:px-6 lg:px-8 py-6 sm:py-8 rounded-2xl border border-white/10 shadow-xl mx-4 w-full max-w-sm">
-          <a *ngFor="let link of navLinks" [href]="link.href" class="mobile-menu-item text-white text-base sm:text-lg font-semibold px-4 sm:px-6 py-3 rounded-lg transition-all duration-200 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white hover:shadow-lg w-full text-center" (click)="toggleMenu()">{{ link.label }}</a>
-          <button (click)="scrollToSection('contact'); toggleMenu()" class="mt-2 sm:mt-4 px-6 sm:px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 w-full">Contact</button>
+      <div *ngIf="menuOpen" class="fixed inset-0 z-40 bg-black/90 backdrop-blur-sm flex flex-col items-center justify-center mobile-menu-overlay">
+        <nav class="flex flex-col items-center space-y-4 sm:space-y-6 bg-white/10 backdrop-blur-md px-4 sm:px-6 lg:px-8 py-6 sm:py-8 rounded-2xl border border-white/10 shadow-xl mx-4 w-full max-w-sm mobile-menu-container">
+          <a *ngFor="let link of navLinks" [href]="link.href" class="mobile-menu-item text-white text-base sm:text-lg font-semibold px-4 sm:px-6 py-3 rounded-lg transition-all duration-200 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white hover:shadow-lg w-full text-center" (click)="scrollToSection(link.section)">{{ link.label }}</a>
+          <button (click)="scrollToSection('contact')" class="mt-2 sm:mt-4 px-6 sm:px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 w-full">Contact</button>
         </nav>
       </div>
     </div>
