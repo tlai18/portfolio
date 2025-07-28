@@ -20,36 +20,36 @@
       <div class="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-10 mb-16">
         <div *ngFor="let exp of experiences" class="info-card flex flex-col">
           <div class="flex items-center mb-2">
-            <h3 class="text-xl font-semibold text-white">{{ exp.position }}</h3>
+            <h3 class="text-lg sm:text-xl font-semibold text-white">{{ exp.position }}</h3>
           </div>
-          <div class="text-sm text-gray-400 mb-2">{{ exp.company }} • {{ exp.period }}</div>
-          <p class="text-gray-300 mb-4 flex-1">{{ exp.description }}</p>
+          <div class="text-xs sm:text-sm text-gray-400 mb-2">{{ exp.company }} • {{ exp.period }}</div>
+          <p class="text-sm sm:text-base text-gray-300 mb-4 flex-1">{{ exp.description }}</p>
           <div class="flex flex-wrap gap-2 mt-2">
-            <span *ngFor="let tech of exp.technologies" class="badge">{{ tech }}</span>
+            <span *ngFor="let tech of exp.technologies" class="badge text-xs sm:text-sm">{{ tech }}</span>
           </div>
-          <ul class="list-disc list-inside text-gray-400 mt-4 space-y-1">
+          <ul class="list-disc list-inside text-gray-400 mt-4 space-y-1 text-xs sm:text-sm">
             <li *ngFor="let ach of exp.achievements">{{ ach }}</li>
           </ul>
         </div>
       </div>
       <div class="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-10">
         <div class="info-card">
-          <h4 class="text-lg font-semibold mb-2 text-white">Education</h4>
-          <div class="mb-2 text-gray-200 font-medium">Tufts University</div>
-          <div class="text-gray-400 mb-2">Bachelor of Science in Computer Science</div>
-          <div class="text-gray-400 mb-2">Medford, MA • May 2025</div>
-          <div class="text-gray-400 mb-2">GPA: 3.71/4.00, Dean’s List for Engineers</div>
-          <div class="text-gray-400">Relevant Courses: Algorithms, Data Structures, Programming Languages, Web Programming, Machine Learning, AI, Cybersecurity, iOS & Swift, and more.</div>
+          <h4 class="text-base sm:text-lg font-semibold mb-2 text-white">Education</h4>
+          <div class="mb-2 text-gray-200 font-medium text-sm sm:text-base">Tufts University</div>
+          <div class="text-gray-400 mb-2 text-xs sm:text-sm">Bachelor of Science in Computer Science</div>
+          <div class="text-gray-400 mb-2 text-xs sm:text-sm">Medford, MA • May 2025</div>
+          <div class="text-gray-400 mb-2 text-xs sm:text-sm">GPA: 3.71/4.00, Dean's List for Engineers</div>
+          <div class="text-gray-400 text-xs sm:text-sm">Relevant Courses: Algorithms, Data Structures, Programming Languages, Web Programming, Machine Learning, AI, Cybersecurity, iOS & Swift, and more.</div>
         </div>
         <div class="info-card">
-          <h4 class="text-lg font-semibold mb-2 text-white">Technical Skills</h4>
-          <div class="mb-2 text-gray-200 font-medium">Technologies</div>
-          <div class="flex flex-wrap gap-3 mb-4">
-            <span class="badge" *ngFor="let tech of experienceTechnologies">{{ tech }}</span>
+          <h4 class="text-base sm:text-lg font-semibold mb-2 text-white">Technical Skills</h4>
+          <div class="mb-2 text-gray-200 font-medium text-sm sm:text-base">Technologies</div>
+          <div class="flex flex-wrap gap-2 sm:gap-3 mb-4">
+            <span class="badge text-xs sm:text-sm" *ngFor="let tech of experienceTechnologies">{{ tech }}</span>
           </div>
-          <div class="mb-2 text-gray-200 font-medium">Programming Languages</div>
-          <div class="flex flex-wrap gap-3">
-            <span class="badge" *ngFor="let lang of experienceLanguages">{{ lang }}</span>
+          <div class="mb-2 text-gray-200 font-medium text-sm sm:text-base">Programming Languages</div>
+          <div class="flex flex-wrap gap-2 sm:gap-3">
+            <span class="badge text-xs sm:text-sm" *ngFor="let lang of experienceLanguages">{{ lang }}</span>
           </div>
         </div>
       </div>
