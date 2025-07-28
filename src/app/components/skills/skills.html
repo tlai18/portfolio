@@ -17,7 +17,7 @@
         <h2 class="section-title">Skills</h2>
         <p class="section-subtitle">A comprehensive overview of my technical skills and expertise across various technologies and programming languages.</p>
       </div>
-      <div class="grid md:grid-cols-3 gap-10">
+      <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10">
         <div *ngFor="let category of skillCategories" class="info-card">
           <h3 class="text-xl font-semibold mb-4 text-white">{{ category.name }}</h3>
           <ul class="space-y-2">
@@ -28,7 +28,7 @@
           </ul>
         </div>
       </div>
-      <div class="mt-16 grid md:grid-cols-2 gap-10">
+      <div class="mt-16 grid sm:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-10">
         <div class="info-card">
           <h4 class="text-lg font-semibold mb-2 text-white">Additional Technologies</h4>
           <div class="flex flex-wrap gap-3">

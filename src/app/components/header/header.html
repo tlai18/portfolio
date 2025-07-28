@@ -19,7 +19,7 @@
         <span class="block w-8 h-1 bg-white rounded transition-all duration-300" [class.-rotate-45]="menuOpen"></span>
       </button>
       <div *ngIf="menuOpen" class="fixed inset-0 z-40 bg-black/80 backdrop-blur-sm flex flex-col items-center justify-center space-y-8">
-        <nav class="flex flex-col items-center space-y-6 bg-white/10 px-8 py-8 rounded-2xl border border-white/10 shadow-xl">
+        <nav class="flex flex-col items-center space-y-6 bg-white/10 px-6 sm:px-8 py-6 sm:py-8 rounded-2xl border border-white/10 shadow-xl mx-4">
           <a *ngFor="let link of navLinks" [href]="link.href" class="mobile-menu-item text-white text-lg font-semibold px-6 py-3 rounded-lg transition-all duration-200 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white hover:shadow-lg" (click)="toggleMenu()">{{ link.label }}</a>
           <button (click)="scrollToSection('contact'); toggleMenu()" class="mt-4 px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300">Contact</button>
         </nav>

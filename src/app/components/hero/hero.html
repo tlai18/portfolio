@@ -45,22 +45,22 @@
           </div>
 
           <!-- Stats Row (glass, shadow, dividers) -->
-          <div class="flex flex-wrap gap-0 py-4 items-center bg-white/10 glass-dark rounded-xl border border-white/10 shadow-lg divide-x divide-white/10 mb-8">
-            <div class="flex flex-col items-center justify-center px-6 py-4 min-w-[110px] min-h-[70px] hover:shadow-xl transition">
-              <div class="text-2xl font-bold text-blue-400">4+</div>
-              <div class="text-xs text-gray-300">Years Exp</div>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-0 py-4 items-center bg-white/10 glass-dark rounded-xl border border-white/10 shadow-lg sm:divide-x sm:divide-white/10 mb-8">
+            <div class="flex flex-col items-center justify-center px-3 sm:px-6 py-4 min-h-[70px] hover:shadow-xl transition">
+              <div class="text-xl sm:text-2xl font-bold text-blue-400">4+</div>
+              <div class="text-xs text-gray-300 text-center">Years Exp</div>
             </div>
-            <div class="flex flex-col items-center justify-center px-6 py-4 min-w-[110px] min-h-[70px] hover:shadow-xl transition">
-              <div class="text-2xl font-bold text-purple-400">20+</div>
-              <div class="text-xs text-gray-300">Projects</div>
+            <div class="flex flex-col items-center justify-center px-3 sm:px-6 py-4 min-h-[70px] hover:shadow-xl transition">
+              <div class="text-xl sm:text-2xl font-bold text-purple-400">20+</div>
+              <div class="text-xs text-gray-300 text-center">Projects</div>
             </div>
-            <div class="flex flex-col items-center justify-center px-6 py-4 min-w-[110px] min-h-[70px] hover:shadow-xl transition">
-              <div class="text-2xl font-bold text-pink-400">3.71</div>
-              <div class="text-xs text-gray-300">GPA</div>
+            <div class="flex flex-col items-center justify-center px-3 sm:px-6 py-4 min-h-[70px] hover:shadow-xl transition">
+              <div class="text-xl sm:text-2xl font-bold text-pink-400">3.71</div>
+              <div class="text-xs text-gray-300 text-center">GPA</div>
             </div>
-            <div class="flex flex-col items-center justify-center px-6 py-4 min-w-[110px] min-h-[70px] hover:shadow-xl transition">
-              <div class="text-2xl font-bold text-yellow-400">8+</div>
-              <div class="text-xs text-gray-300">Languages</div>
+            <div class="flex flex-col items-center justify-center px-3 sm:px-6 py-4 min-h-[70px] hover:shadow-xl transition">
+              <div class="text-xl sm:text-2xl font-bold text-yellow-400">8+</div>
+              <div class="text-xs text-gray-300 text-center">Languages</div>
             </div>
           </div>
 
@@ -110,34 +110,34 @@
 
         <!-- Right Column: Code Editor, straight, no rotation, smaller, with glow and inner shadow -->
         <div class="relative flex justify-center items-center mt-12 lg:mt-0">
-          <div class="relative w-full max-w-md h-[320px] md:h-[360px] lg:h-[400px] bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-pink-900/20 rounded-2xl border border-white/10 border-white/20 backdrop-blur-sm overflow-hidden shadow-2xl code-editor-glow hover:shadow-2xl transition duration-300 overflow-x-auto">
+          <div class="relative w-full max-w-sm sm:max-w-md h-[280px] sm:h-[320px] md:h-[360px] lg:h-[400px] bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-pink-900/20 rounded-2xl border border-white/10 border-white/20 backdrop-blur-sm overflow-hidden shadow-2xl code-editor-glow hover:shadow-2xl transition duration-300 overflow-x-auto">
             <!-- Animated Radial Gradient Behind Editor -->
             <div class="absolute inset-0 z-0 pointer-events-none">
               <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-full blur-3xl opacity-40 animate-gradientShift"></div>
             </div>
             <!-- Code Editor Tab Bar with Tech Logos -->
-            <div class="flex items-center bg-black/30 border-b border-white/10 rounded-t-2xl px-6 py-2 relative z-10 gap-2">
-              <div class="flex space-x-2 mr-4">
-                <span class="w-3 h-3 bg-red-500 rounded-full inline-block"></span>
-                <span class="w-3 h-3 bg-yellow-500 rounded-full inline-block"></span>
-                <span class="w-3 h-3 bg-green-500 rounded-full inline-block"></span>
+            <div class="flex items-center bg-black/30 border-b border-white/10 rounded-t-2xl px-3 sm:px-6 py-2 relative z-10 gap-1 sm:gap-2">
+              <div class="flex space-x-1 sm:space-x-2 mr-2 sm:mr-4">
+                <span class="w-2 h-2 sm:w-3 sm:h-3 bg-red-500 rounded-full inline-block"></span>
+                <span class="w-2 h-2 sm:w-3 sm:h-3 bg-yellow-500 rounded-full inline-block"></span>
+                <span class="w-2 h-2 sm:w-3 sm:h-3 bg-green-500 rounded-full inline-block"></span>
               </div>
-              <span class="text-xs text-gray-300 font-mono mr-4">portfolio.ts</span>
+              <span class="text-xs text-gray-300 font-mono mr-2 sm:mr-4 hidden sm:inline">portfolio.ts</span>
               <!-- Tech Tabs -->
-              <span class="inline-flex items-center px-2 py-1 bg-white/10 rounded-md text-xs text-blue-400 font-semibold mr-2">
-                <span class="mr-1">⚛️</span> React
+              <span class="inline-flex items-center px-1 sm:px-2 py-1 bg-white/10 rounded-md text-xs text-blue-400 font-semibold mr-1 sm:mr-2">
+                <span class="mr-1 hidden sm:inline">⚛️</span> <span class="sm:hidden">⚛️</span>
               </span>
-              <span class="inline-flex items-center px-2 py-1 bg-white/10 rounded-md text-xs text-green-400 font-semibold mr-2">
-                <span class="mr-1">🟩</span> Node.js
+              <span class="inline-flex items-center px-1 sm:px-2 py-1 bg-white/10 rounded-md text-xs text-green-400 font-semibold mr-1 sm:mr-2">
+                <span class="mr-1 hidden sm:inline">🟩</span> <span class="sm:hidden">🟩</span>
               </span>
-              <span class="inline-flex items-center px-2 py-1 bg-white/10 rounded-md text-xs text-sky-400 font-semibold">
-                <span class="mr-1">🟦</span> TypeScript
+              <span class="inline-flex items-center px-1 sm:px-2 py-1 bg-white/10 rounded-md text-xs text-sky-400 font-semibold">
+                <span class="mr-1 hidden sm:inline">🟦</span> <span class="sm:hidden">🟦</span>
               </span>
             </div>
             <!-- Animated Code Lines with Typing Effect and Glow -->
-            <div class="absolute left-0 right-0 top-12 bottom-10 px-6 py-3 space-y-3 font-mono text-base z-10 overflow-x-auto overflow-y-auto w-full h-full text-left whitespace-nowrap code-editor-scrollbar">
-              <div class="inline-block min-w-[700px]">
-                <div class="space-y-2 text-sm">
+            <div class="absolute left-0 right-0 top-12 bottom-10 px-3 sm:px-6 py-3 space-y-2 sm:space-y-3 font-mono text-xs sm:text-base z-10 overflow-x-auto overflow-y-auto w-full h-full text-left whitespace-nowrap code-editor-scrollbar">
+              <div class="inline-block min-w-[500px] sm:min-w-[700px]">
+                <div class="space-y-1 sm:space-y-2 text-xs sm:text-sm">
                   <div class="code-line code-glow text-blue-400 animate-typing-1">const developer = <span class="text-green-400">'Thomas Lai'</span>;</div>
                   <div class="code-line code-glow text-blue-400 animate-typing-2">const skills = <span class="text-yellow-400">['React', 'Node.js', 'TypeScript', 'UI/UX']</span>;</div>
                   <div class="code-line code-glow text-blue-400 animate-typing-3">const location = <span class="text-purple-400">'Boston, MA'</span>;</div>
