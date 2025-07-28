@@ -1,1 +1,95 @@
-/* Contact component styles */ 
+.section-container {
+  background: linear-gradient(135deg, #18181b 80%, #312e81 100%);
+  color: #fff;
+  padding: 1.5rem 1rem; /* Mobile */
+  border-radius: 1rem; /* Mobile */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@media (min-width: 640px) {
+  .section-container {
+    padding: 2.5rem 1.5rem; /* Desktop */
+    border-radius: 1.5rem; /* Desktop */
+  }
+}
+
+.section-title {
+  font-size: 2rem; /* Mobile */
+  font-weight: bold;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #60a5fa, #a78bfa, #ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+@media (min-width: 640px) {
+  .section-title {
+    font-size: 3rem; /* Desktop */
+  }
+}
+
+.section-subtitle {
+  font-size: 1rem; /* Mobile */
+  color: #d1d5db;
+  margin-bottom: 2rem;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 640px) {
+  .section-subtitle {
+    font-size: 1.125rem; /* Desktop */
+    margin-bottom: 3rem;
+  }
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem; /* Mobile */
+  padding: 1.5rem; /* Mobile */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 640px) {
+  .info-card {
+    border-radius: 1.5rem; /* Desktop */
+    padding: 2rem; /* Desktop */
+  }
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1), transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.fade-in.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 

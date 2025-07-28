@@ -15,13 +15,13 @@
     <div class="section-container fade-in" scrollAnimate>
       <div class="info-card flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
         <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-3 text-center sm:text-left">
-          <span class="section-title text-xl sm:text-2xl font-bold">Thomas Lai</span>
+          <span class="section-title text-lg sm:text-xl lg:text-2xl font-bold">Thomas Lai</span>
           <span class="text-gray-400 text-xs sm:text-sm">&copy; {{ currentYear }} All rights reserved.</span>
         </div>
         <div class="flex items-center space-x-2 sm:space-x-4">
-          <a *ngFor="let social of socialLinks" [href]="social.url" target="_blank" rel="noopener" class="badge flex items-center space-x-1 sm:space-x-2">
-            <span class="text-lg sm:text-xl">{{ social.icon }}</span>
-            <span class="text-xs sm:text-sm font-medium">{{ social.name }}</span>
+          <a *ngFor="let social of socialLinks" [href]="social.url" target="_blank" rel="noopener" class="badge flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2">
+            <span class="text-base sm:text-lg lg:text-xl">{{ social.icon }}</span>
+            <span class="text-xs sm:text-sm font-medium hidden sm:inline">{{ social.name }}</span>
           </a>
         </div>
       </div>
