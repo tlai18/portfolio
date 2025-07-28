@@ -1,0 +1,61 @@
+/* Header component styles */
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.3s ease-out;
+}
+
+/* Smooth transitions for header background */
+header {
+  transition: all 0.3s ease;
+}
+
+/* Enhanced hover effects for navigation items */
+.nav-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-item:hover::before {
+  width: 100%;
+}
+
+/* Mobile menu improvements */
+.mobile-menu-item {
+  transition: all 0.2s ease;
+}
+
+.mobile-menu-item:hover {
+  transform: translateX(8px);
+}
+
+/* Logo hover effect */
+.logo-container:hover .logo-icon {
+  transform: rotate(5deg) scale(1.05);
+}
+
+.logo-icon {
+  transition: all 0.3s ease;
+} 

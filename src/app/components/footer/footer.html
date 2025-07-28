@@ -1,0 +1,30 @@
+<footer class="py-10 bg-black text-white border-t border-white/10 relative overflow-hidden">
+  <!-- Minimal Gradient Overlay (gray/white/soft blue, subtle) -->
+  <div class="absolute inset-0 z-0 pointer-events-none">
+    <div class="w-full h-full animate-gradientShift bg-gradient-to-br from-gray-900/50 via-white/10 to-blue-900/20 opacity-30"></div>
+  </div>
+  <!-- Minimal Grid Background (very subtle) -->
+  <div class="absolute inset-0 opacity-5 z-0">
+    <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0); background-size: 50px 50px;"></div>
+  </div>
+  <!-- One Minimal Blob -->
+  <div class="absolute inset-0 z-0 pointer-events-none">
+    <div class="blob blob2" style="opacity:0.12;"></div>
+  </div>
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="section-container fade-in" scrollAnimate>
+      <div class="info-card flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center space-x-3">
+          <span class="section-title text-2xl font-bold">Thomas Lai</span>
+          <span class="text-gray-400 text-sm">&copy; {{ currentYear }} All rights reserved.</span>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a *ngFor="let social of socialLinks" [href]="social.url" target="_blank" rel="noopener" class="badge flex items-center space-x-2">
+            <span class="text-xl">{{ social.icon }}</span>
+            <span class="text-sm font-medium">{{ social.name }}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

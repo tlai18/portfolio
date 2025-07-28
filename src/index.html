@@ -2,12 +2,126 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>MyProject</title>
+  <title>Thomas Lai - Software Engineer</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Thomas Lai is a Software Engineer based in Boston, MA. Specializing in React, Node.js, and full-stack development. View my portfolio of projects and experience.">
+  <meta name="keywords" content="Thomas Lai, Software Engineer, React, Node.js, TypeScript, Full Stack Developer, Boston, Tufts University">
+  <meta name="author" content="Thomas Lai">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tlai.dev/">
+  <meta property="og:title" content="Thomas Lai - Software Engineer">
+  <meta property="og:description" content="Software Engineer specializing in React, Node.js, and full-stack development. Based in Boston, MA.">
+  <meta property="og:image" content="https://tlai.dev/assets/og-image.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://tlai.dev/">
+  <meta property="twitter:title" content="Thomas Lai - Software Engineer">
+  <meta property="twitter:description" content="Software Engineer specializing in React, Node.js, and full-stack development. Based in Boston, MA.">
+  <meta property="twitter:image" content="https://tlai.dev/assets/og-image.jpg">
+  
+  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="manifest" href="assets/site.webmanifest">
+  
+  <!-- Preconnect to external domains -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#000000">
+  <meta name="msapplication-TileColor" content="#000000">
+  
+  <!-- Robots -->
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://tlai.dev/">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Thomas Lai",
+    "jobTitle": "Software Engineer",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Tufts University"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Boston",
+      "addressRegion": "MA",
+      "addressCountry": "US"
+    },
+    "email": "lai.thomas011@gmail.com",
+    "url": "https://tlai.dev",
+    "sameAs": [
+      "https://github.com/tlai18",
+      "https://linkedin.com/in/t-lai"
+    ],
+    "knowsAbout": [
+      "React", "Node.js", "TypeScript", "JavaScript", "Python", "MongoDB", "Full Stack Development"
+    ]
+  }
+  </script>
 </head>
 <body>
-  <app-root></app-root>
+  <app-root>
+    <!-- Loading spinner -->
+    <div class="loading-container">
+      <div class="loading-spinner">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+      </div>
+    </div>
+  </app-root>
+  
+  <style>
+    .loading-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    
+    .loading-spinner {
+      text-align: center;
+      color: #fff;
+    }
+    
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(59, 130, 246, 0.3);
+      border-top: 3px solid #3b82f6;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 1rem;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
 </body>
 </html>

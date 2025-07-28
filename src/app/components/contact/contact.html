@@ -1,0 +1,31 @@
+<section id="contact" class="py-24 bg-black text-white relative">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Contact</h2>
+      <p class="text-lg text-gray-300 max-w-2xl mx-auto">Interested in working together or want to connect? Reach out via any of the methods below!</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-10 mb-16">
+      <div class="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/10 p-8 shadow-lg flex flex-col items-center text-center">
+        <div class="text-3xl mb-2">📧</div>
+        <div class="text-lg font-semibold text-white mb-1">{{ contactInfo[0].value }}</div>
+        <div class="text-gray-400 mb-2">Email</div>
+        <a href="mailto:{{ contactInfo[0].value }}" class="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold shadow hover:from-blue-700 hover:to-purple-700 transition-all duration-300 mt-2">Send Email</a>
+      </div>
+      <div class="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/10 p-8 shadow-lg flex flex-col items-center text-center">
+        <div class="text-3xl mb-2">📱</div>
+        <div class="text-lg font-semibold text-white mb-1">{{ contactInfo[1].value }}</div>
+        <div class="text-gray-400 mb-2">Phone</div>
+        <a href="tel:{{ contactInfo[1].value }}" class="px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-semibold shadow hover:from-purple-700 hover:to-pink-700 transition-all duration-300 mt-2">Call Now</a>
+      </div>
+    </div>
+    <div class="flex flex-wrap justify-center gap-6 mt-8">
+      <a *ngFor="let social of socialLinks" [href]="social.url" target="_blank" rel="noopener" class="flex items-center space-x-3 px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/10 shadow hover:shadow-2xl transition-all duration-300 hover:scale-105">
+        <span class="text-2xl">{{ social.icon }}</span>
+        <span class="text-white font-medium">{{ social.name }}</span>
+      </a>
+    </div>
+    <div class="text-center mt-16">
+      <span class="inline-block px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full text-sm font-semibold shadow">Available for new opportunities!</span>
+    </div>
+  </div>
+</section>
