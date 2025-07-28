@@ -20,12 +20,9 @@
       <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10">
         <div *ngFor="let category of skillCategories" class="info-card">
           <h3 class="text-xl font-semibold mb-4 text-white">{{ category.name }}</h3>
-          <ul class="space-y-2">
-            <li *ngFor="let skill of category.skills" class="flex items-center justify-between">
-              <span class="text-gray-200">{{ skill.name }}</span>
-              <span class="badge">{{ skill.level }}</span>
-            </li>
-          </ul>
+          <div class="flex flex-wrap gap-2">
+            <span class="badge" *ngFor="let skill of category.skills">{{ skill.name }}</span>
+          </div>
         </div>
       </div>
       <div class="mt-16 grid sm:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-10">
