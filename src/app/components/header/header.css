@@ -45,10 +45,30 @@ header {
 /* Mobile menu improvements */
 .mobile-menu-item {
   transition: all 0.2s ease;
+  width: 100%;
+  text-align: center;
 }
 
 .mobile-menu-item:hover {
   transform: translateX(8px);
+}
+
+/* Mobile menu container */
+.mobile-menu-container {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Responsive mobile menu */
+@media (max-width: 640px) {
+  .mobile-menu-item {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
+  
+  .mobile-menu-container {
+    padding: 1rem;
+  }
 }
 
 /* Logo hover effect */
@@ -58,4 +78,26 @@ header {
 
 .logo-icon {
   transition: all 0.3s ease;
+}
+
+/* Hamburger menu button improvements */
+.hamburger-button {
+  transition: all 0.3s ease;
+}
+
+.hamburger-button:hover {
+  transform: scale(1.1);
+}
+
+/* Ensure mobile menu is properly positioned */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 40;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 } 
