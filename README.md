@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with Angular 20 and Tailwind CSS 4.
 
-## 🚀 Features
+## Features
 
 - **Modern Design**: Dark glassmorphic theme with smooth animations
 - **Responsive**: Optimized for all devices (mobile, tablet, desktop)
@@ -10,7 +10,7 @@ A modern, responsive portfolio website built with Angular 20 and Tailwind CSS 4.
 - **Accessible**: Follows web accessibility best practices
 - **SEO Ready**: Clean, semantic HTML structure
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend**: Angular 20
 - **Styling**: Tailwind CSS 4
@@ -18,7 +18,7 @@ A modern, responsive portfolio website built with Angular 20 and Tailwind CSS 4.
 - **Build Tool**: Angular CLI
 - **Package Manager**: npm
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -39,14 +39,14 @@ src/
 └── main.ts               # Application entry point
 ```
 
-## 🎨 Design System
+## Design System
 
 - **Color Palette**: Dark theme with blue, purple, and pink gradients
 - **Typography**: Modern sans-serif fonts with proper hierarchy
 - **Animations**: Smooth transitions and hover effects
 - **Layout**: Glassmorphic cards with backdrop blur effects
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -81,13 +81,13 @@ npm run build
 
 The build artifacts will be stored in the `dist/` directory.
 
-## 📱 Responsive Breakpoints
+## Responsive Breakpoints
 
 - **Mobile**: < 768px
 - **Tablet**: 768px - 1024px
 - **Desktop**: > 1024px
 
-## 🎯 Sections
+## Sections
 
 1. **Header**: Navigation with smooth scrolling and mobile menu
 2. **Hero**: Introduction with animated code editor aesthetic
