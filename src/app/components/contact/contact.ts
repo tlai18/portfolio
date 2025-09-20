@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ScrollAnimateDirective } from '../scroll-animate.directive';
+import { SocialLinksService, SocialLink } from '../../services/social-links.service';
 
 @Component({
   selector: 'app-contact',
@@ -11,6 +12,8 @@ import { ScrollAnimateDirective } from '../scroll-animate.directive';
   styleUrl: './contact.css'
 })
 export class ContactComponent {
+  constructor(private socialLinksService: SocialLinksService) {}
+
   contactForm = {
     name: '',
     email: '',
@@ -39,26 +42,9 @@ export class ContactComponent {
     }
   ];
 
-  socialLinks = [
-    {
-      name: 'GitHub',
-      icon: 'github',
-      url: 'https://github.com/tlai18',
-      color: 'hover:bg-gray-900'
-    },
-    {
-      name: 'LinkedIn',
-      icon: 'linkedin',
-      url: 'https://linkedin.com/in/t-lai',
-      color: 'hover:bg-blue-600'
-    },
-    {
-      name: 'Tufts Email',
-      icon: 'email',
-      url: 'mailto:thomas.lai@tufts.edu',
-      color: 'hover:bg-blue-400'
-    }
-  ];
+  get socialLinks(): SocialLink[] {
+    return this.socialLinksService.getSocialLinks();
+  }
 
   onSubmit() {
     // Handle form submission
