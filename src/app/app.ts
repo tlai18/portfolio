@@ -7,6 +7,7 @@ import { ProjectsComponent } from './components/projects/projects';
 import { ExperienceComponent } from './components/experience/experience';
 import { ContactComponent } from './components/contact/contact';
 import { FooterComponent } from './components/footer/footer';
+import { ChatbotComponent } from './components/chatbot/chatbot';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,8 @@ import { FooterComponent } from './components/footer/footer';
     ProjectsComponent,
     ExperienceComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    ChatbotComponent
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'

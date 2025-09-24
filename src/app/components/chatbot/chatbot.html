@@ -1,0 +1,108 @@
+<div class="chatbot-container" (keydown)="onKeyDown($event)">
+  <!-- Chat Button -->
+  <button 
+    class="chat-button" 
+    (click)="toggleChat()" 
+    [class.open]="isOpen"
+    [attr.aria-label]="isOpen ? 'Close chat' : 'Open chat'"
+    [attr.aria-expanded]="isOpen"
+    role="button"
+    tabindex="0"
+  >
+    <!-- Notification Badge -->
+    <div *ngIf="!isOpen && hasUserInteracted" class="notification-badge"></div>
+    <svg *ngIf="!isOpen" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM20 16H5.17L4 17.17V4H20V16Z" fill="currentColor"/>
+      <path d="M7 9H17V11H7V9ZM7 12H15V14H7V12Z" fill="currentColor"/>
+    </svg>
+    <svg *ngIf="isOpen" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="currentColor"/>
+    </svg>
+  </button>
+
+  <!-- Chat Window -->
+  <div 
+    class="chat-window" 
+    [class.open]="isOpen"
+    role="dialog"
+    [attr.aria-label]="'Chat with Thomas\'s assistant'"
+    [attr.aria-hidden]="!isOpen"
+  >
+    <div class="chat-header">
+      <div class="chat-title">
+        <div class="bot-avatar">👨‍💻</div>
+        <div>
+          <h3>Thomas's Assistant</h3>
+          <span class="status">Available for Opportunities</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-messages">
+      <div 
+        *ngFor="let message of messages" 
+        class="message"
+        [class.user-message]="message.isUser"
+        [class.bot-message]="!message.isUser"
+        [class.system-message]="message.isSystemMessage"
+      >
+        <div class="message-content">
+          {{ message.text }}
+        </div>
+        <div class="message-time" *ngIf="!message.isSystemMessage">
+          {{ message.timestamp | date:'short' }}
+        </div>
+      </div>
+
+      <!-- Quick Actions -->
+      <div *ngIf="showQuickActions" class="quick-actions">
+        <div class="quick-actions-scroll">
+          <button 
+            *ngFor="let action of quickActions" 
+            (click)="handleQuickAction(action.action)"
+            class="quick-action-btn"
+            [title]="action.label"
+          >
+            <span class="quick-action-icon">{{ action.icon }}</span>
+            <span class="quick-action-text">{{ action.label }}</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Typing indicator -->
+      <div *ngIf="isTyping" class="message bot-message typing">
+        <div class="message-content">
+          <div class="typing-indicator">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-input">
+      <div class="input-container">
+        <textarea 
+          [(ngModel)]="newMessage"
+          (keypress)="onKeyPress($event)"
+          (input)="autoResize($event)"
+          rows="1"
+          class="message-input"
+          placeholder="Type your message..."
+          aria-label="Type your message"
+          role="textbox"
+        ></textarea>
+        <button 
+          (click)="sendMessage()" 
+          [disabled]="!newMessage.trim() || isTyping"
+          class="send-button"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.01 21L23 12L2.01 3L2 10L17 12L2 14L2.01 21Z" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
