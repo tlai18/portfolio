@@ -19,13 +19,11 @@
       </div>
       <div class="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-10 mb-16">
         <div class="info-card flex flex-col items-center text-center">
-          <div class="text-3xl mb-2">📧</div>
           <div class="text-lg font-semibold text-white mb-1">{{ contactInfo[0].value }}</div>
           <div class="text-gray-400 mb-2">Email</div>
           <a href="mailto:{{ contactInfo[0].value }}" class="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold shadow hover:from-blue-700 hover:to-purple-700 transition-all duration-300 mt-2">Send Email</a>
         </div>
         <div class="info-card flex flex-col items-center text-center">
-          <div class="text-3xl mb-2">📱</div>
           <div class="text-lg font-semibold text-white mb-1">{{ contactInfo[1].value }}</div>
           <div class="text-gray-400 mb-2">Phone</div>
           <a href="tel:{{ contactInfo[1].value }}" class="px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-semibold shadow hover:from-purple-700 hover:to-pink-700 transition-all duration-300 mt-2">Call Now</a>
