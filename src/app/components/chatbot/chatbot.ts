@@ -179,7 +179,7 @@ export class ChatbotComponent implements OnInit {
   downloadResume() {
     // Create a temporary link to download the resume
     const link = document.createElement('a');
-    link.href = '/Thomas_Lai_Resume.pdf';
+    link.href = './Thomas_Lai_Resume.pdf';
     link.download = 'Thomas_Lai_Resume.pdf';
     document.body.appendChild(link);
     link.click();
