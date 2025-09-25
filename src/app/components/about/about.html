@@ -15,41 +15,158 @@
     <div class="section-container fade-in" scrollAnimate>
       <div class="text-center mb-16">
         <h2 class="section-title">About Me</h2>
-        <p class="section-subtitle">Computer Science student & Software Engineer passionate about building innovative digital experiences and solving real-world problems.</p>
+        <p class="section-subtitle">Hey there! I'm Thomas, a Computer Science graduate from Tufts University who loves turning ideas into tangible, real-world solutions that make a difference.</p>
       </div>
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div class="space-y-8">
-          <div class="info-card">
-            <h3 class="text-2xl font-semibold mb-2 text-white">Who I Am</h3>
-            <p class="text-gray-300 mb-4">I’m a Computer Science student at <span class="text-blue-400 font-semibold">Tufts University</span> with a passion for web and mobile development, research, and team leadership. I love building products that make a difference.</p>
-            <ul class="list-disc list-inside text-gray-400 space-y-1">
-              <li>Mobile App Development</li>
-              <li>Research & Innovation</li>
-              <li>Team Leadership</li>
-            </ul>
-          </div>
-          <div class="grid grid-cols-3 gap-4 sm:gap-6">
-            <div class="info-card text-center">
-              <div class="text-2xl sm:text-3xl font-bold text-white">3.71</div>
-              <div class="text-xs sm:text-sm text-gray-400">GPA</div>
+      
+      <!-- Profile Section -->
+      <div class="max-w-4xl mx-auto mb-16">
+        <div class="info-card p-6 md:p-8">
+          <div class="grid md:grid-cols-3 gap-6 items-center">
+            <!-- Profile Picture -->
+            <div class="md:col-span-1 flex justify-center">
+              <div class="w-36 h-36 rounded-full overflow-hidden border-2 border-blue-500/30 shadow-lg hover:shadow-xl hover:border-blue-400/50 transition-all duration-300">
+                <img src="./thomas-lai-profile.jpg" 
+                     alt="Thomas Lai" 
+                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                     loading="lazy"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <!-- Fallback if image fails to load -->
+                <div class="w-full h-full bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center" style="display:none;">
+                  <span class="text-white font-bold text-xl">TL</span>
+                </div>
+              </div>
             </div>
-            <div class="info-card text-center">
-              <div class="text-2xl sm:text-3xl font-bold text-white">4+</div>
-              <div class="text-xs sm:text-sm text-gray-400">Years Experience</div>
-            </div>
-            <div class="info-card text-center">
-              <div class="text-2xl sm:text-3xl font-bold text-white">100%</div>
-              <div class="text-xs sm:text-sm text-gray-400">Project Success</div>
+            
+            <!-- Profile Info -->
+            <div class="md:col-span-2 text-center md:text-left">
+              <h3 class="text-2xl font-bold text-white mb-2">Thomas Lai</h3>
+              <p class="text-lg text-gray-300 mb-4">Computer Science Graduate</p>
+              <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-3 text-sm">
+                <div class="flex items-center justify-center space-x-2 px-3 py-1 bg-green-500/20 text-green-300 rounded-full">
+                  <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                  <span>Always learning</span>
+                </div>
+                <div class="flex items-center justify-center space-x-2 px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full">
+                  <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                  <span>Tufts University Graduate</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="info-card flex flex-col justify-center h-full">
-          <h3 class="text-2xl font-semibold mb-2 text-white">My Mission</h3>
-          <p class="text-gray-300 mb-4">To create impactful, user-centered software that blends beautiful design with robust engineering. I strive to continuously learn, grow, and contribute to meaningful projects.</p>
-          <div class="flex flex-wrap gap-4 mt-4">
-            <span class="badge">Web Development</span>
-            <span class="badge">Mobile Apps</span>
-            <span class="badge">Research</span>
+      </div>
+
+      <!-- Personal Story & Interests -->
+      <div class="grid lg:grid-cols-2 gap-6 mb-16">
+        <!-- Personal Story -->
+        <div class="info-card">
+          <h3 class="text-2xl font-semibold mb-4 text-white flex items-center">
+            <div class="w-1 h-8 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full mr-4"></div>
+            Who I Am
+          </h3>
+          <p class="text-gray-300 mb-4 leading-relaxed">
+            When I'm not coding, you'll find me on the basketball court, hiking trails, or exploring new restaurants around the city. I love staying active through sports like basketball, soccer, and pickleball, but I also enjoy quieter moments cooking, watching movies, or playing board games with friends. I'm passionate about creating things that people can actually use and touch – whether that's a mobile app, a website, or even a great meal.
+          </p>
+          <h4 class="text-lg font-semibold mb-3 text-white">What Drives Me</h4>
+          <p class="text-gray-300 leading-relaxed">
+            I believe in the power of making things that matter. Whether I'm building an app, cooking a meal, or crafting a solution, I'm driven by the satisfaction of creating something tangible that improves people's lives. I thrive on taking ideas from concept to reality and seeing the real impact they can have.
+          </p>
+        </div>
+        
+        <!-- Interests & Hobbies -->
+        <div class="info-card">
+          <h3 class="text-2xl font-semibold mb-4 text-white flex items-center">
+            <div class="w-1 h-8 bg-gradient-to-b from-purple-500 to-pink-500 rounded-full mr-4"></div>
+            Interests & Hobbies
+          </h3>
+          <div class="space-y-3">
+            <div>
+              <h4 class="text-lg font-medium text-white mb-2">Sports & Fitness</h4>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="badge hover:scale-105 transition-transform duration-200 hover:shadow-lg">Basketball</span>
+                <span class="badge hover:scale-105 transition-transform duration-200 hover:shadow-lg">Soccer</span>
+                <span class="badge hover:scale-105 transition-transform duration-200 hover:shadow-lg">Pickleball</span>
+                <span class="badge hover:scale-105 transition-transform duration-200 hover:shadow-lg">Golf</span>
+                <span class="badge hover:scale-105 transition-transform duration-200 hover:shadow-lg">Squash</span>
+                <span class="badge hover:scale-105 transition-transform duration-200 hover:shadow-lg">Badminton</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-lg font-medium text-white mb-2">Outdoor & Exploration</h4>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="badge hover:scale-105 transition-transform duration-200 hover:shadow-lg">Hiking</span>
+                <span class="badge hover:scale-105 transition-transform duration-200 hover:shadow-lg">Urban Exploration</span>
+                <span class="badge hover:scale-105 transition-transform duration-200 hover:shadow-lg">Restaurant Hopping</span>
+                <span class="badge hover:scale-105 transition-transform duration-200 hover:shadow-lg">Travel</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-lg font-medium text-white mb-2">Entertainment & Social</h4>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="badge hover:scale-105 transition-transform duration-200 hover:shadow-lg">Movies</span>
+                <span class="badge hover:scale-105 transition-transform duration-200 hover:shadow-lg">Board Games</span>
+                <span class="badge hover:scale-105 transition-transform duration-200 hover:shadow-lg">Cooking</span>
+                <span class="badge hover:scale-105 transition-transform duration-200 hover:shadow-lg">Photography</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-lg font-medium text-white mb-2">Values</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge hover:scale-105 transition-transform duration-200 hover:shadow-lg">Building Things</span>
+                <span class="badge hover:scale-105 transition-transform duration-200 hover:shadow-lg">Real Impact</span>
+                <span class="badge hover:scale-105 transition-transform duration-200 hover:shadow-lg">Hands-On</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education Section -->
+      <div class="info-card">
+        <h3 class="text-2xl font-semibold mb-6 text-white flex items-center">
+          <div class="w-1 h-8 bg-gradient-to-b from-yellow-500 to-orange-500 rounded-full mr-4"></div>
+          Education
+        </h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="space-y-3">
+            <div>
+              <div class="text-gray-200 font-semibold text-lg mb-2">Tufts University</div>
+              <div class="text-gray-400 mb-2">Bachelor of Science in Computer Science</div>
+              <div class="text-gray-400 mb-3">Medford, MA • Graduated May 2025</div>
+              <div class="inline-flex items-center px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium">
+                <span class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                Dean's List for Engineers
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="text-gray-300 font-semibold mb-3 text-lg">Key Coursework</div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <div class="flex items-center text-gray-400 text-sm">
+                <span class="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
+                Algorithms & Data Structures
+              </div>
+              <div class="flex items-center text-gray-400 text-sm">
+                <span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
+                Machine Learning & AI
+              </div>
+              <div class="flex items-center text-gray-400 text-sm">
+                <span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                Cybersecurity
+              </div>
+              <div class="flex items-center text-gray-400 text-sm">
+                <span class="w-2 h-2 bg-orange-400 rounded-full mr-3"></span>
+                iOS & Swift
+              </div>
+              <div class="flex items-center text-gray-400 text-sm">
+                <span class="w-2 h-2 bg-pink-400 rounded-full mr-3"></span>
+                Web Programming
+              </div>
+              <div class="flex items-center text-gray-400 text-sm">
+                <span class="w-2 h-2 bg-teal-400 rounded-full mr-3"></span>
+                Programming Languages
+              </div>
+            </div>
           </div>
         </div>
       </div>
