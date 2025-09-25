@@ -65,11 +65,4 @@ export class ExperienceComponent {
     }
   ];
 
-  experienceTechnologies = [
-    'React', 'Node.js', 'TypeScript', 'Python', 'MongoDB', 'Firebase', 'Git', 'Agile'
-  ];
-
-  experienceLanguages = [
-    'JavaScript', 'Python', 'Java', 'Swift', 'HTML/CSS', 'SQL'
-  ];
 } 
