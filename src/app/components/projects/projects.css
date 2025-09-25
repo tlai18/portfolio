@@ -177,14 +177,21 @@
 .badge {
   display: inline-block;
   padding: 0.5rem 1.25rem;
-  border-radius: 9999px;
-  background: linear-gradient(90deg, #2563eb, #a21caf, #db2777);
-  color: #fff;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: #9ca3af;
   font-size: 0.875rem;
-  font-weight: 600;
-  box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.17);
+  font-weight: 400;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.badge:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #d1d5db;
+  border-color: rgba(255, 255, 255, 0.12);
 }
 
 .fade-in {
