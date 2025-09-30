@@ -114,7 +114,29 @@
 .fade-in.in-view {
   opacity: 1;
   transform: none;
-} 
+}
+
+.project-link {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #9ca3af;
+  box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.17);
+}
+
+.project-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #d1d5db;
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.25);
+}
+
+.project-private {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #6b7280;
+}
 
 .section-container {
   background: linear-gradient(135deg, #18181b 80%, #312e81 100%);
