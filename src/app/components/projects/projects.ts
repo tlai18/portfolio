@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ScrollAnimateDirective } from '../scroll-animate.directive';
+import { AnalyticsService } from '../../services/analytics.service';
 
 @Component({
   selector: 'app-projects',
@@ -10,6 +11,8 @@ import { ScrollAnimateDirective } from '../scroll-animate.directive';
   styleUrl: './projects.css'
 })
 export class ProjectsComponent {
+  constructor(private analytics: AnalyticsService) {}
+
   projects = [
     {
       title: 'TTS Firewall Management System',
@@ -79,5 +82,9 @@ export class ProjectsComponent {
 
   getOtherProjects() {
     return this.projects.filter(project => !project.featured);
+  }
+
+  onProjectClick(projectName: string, action: 'github' | 'demo' | 'details') {
+    this.analytics.trackProjectClick(projectName, action);
   }
 } 

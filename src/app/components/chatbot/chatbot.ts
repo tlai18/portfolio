@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { AnalyticsService } from '../../services/analytics.service';
 
 interface Message {
   text: string;
@@ -23,6 +24,8 @@ interface QuickAction {
   styleUrl: './chatbot.css'
 })
 export class ChatbotComponent implements OnInit {
+  constructor(private analytics: AnalyticsService) {}
+
   isOpen = false;
   messages: Message[] = [];
   newMessage = '';
@@ -80,6 +83,9 @@ export class ChatbotComponent implements OnInit {
   toggleChat() {
     this.isOpen = !this.isOpen;
     
+    // Track chatbot interactions
+    this.analytics.trackChatbotInteraction(this.isOpen ? 'open' : 'close');
+    
     // Reset quick actions when opening chat for the first time
     if (this.isOpen && !this.hasUserInteracted) {
       this.showQuickActions = true;
@@ -92,6 +98,10 @@ export class ChatbotComponent implements OnInit {
       this.newMessage = '';
       this.hasUserInteracted = true;
       this.showQuickActions = false; // Hide after first user message
+      
+      // Track message sent
+      this.analytics.trackChatbotInteraction('message_sent');
+      
       this.simulateBotResponse();
     }
   }
@@ -147,6 +157,9 @@ export class ChatbotComponent implements OnInit {
     this.hasUserInteracted = true;
     this.showQuickActions = false;
     
+    // Track quick action
+    this.analytics.trackChatbotInteraction('quick_action');
+    
     switch (action) {
       case 'resume':
         this.addSystemMessage("📄 Downloading Thomas's resume...");
@@ -177,6 +190,9 @@ export class ChatbotComponent implements OnInit {
   }
 
   downloadResume() {
+    // Track resume download
+    this.analytics.trackContactInteraction('resume_download');
+    
     // Create a temporary link to download the resume
     const link = document.createElement('a');
     link.href = 'assets/Thomas_Lai_Resume.pdf';
