@@ -122,6 +122,8 @@ header {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   animation: fadeIn 0.3s ease-out;
+  width: 100vw;
+  height: 100vh;
 }
 
 @keyframes fadeIn {
@@ -136,6 +138,8 @@ header {
 /* Mobile menu slide in animation */
 .mobile-menu-container {
   animation: slideInUp 0.3s ease-out;
+  max-height: 80vh; /* Allow for some margin */
+  overflow-y: auto;
 }
 
 @keyframes slideInUp {
