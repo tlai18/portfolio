@@ -9,12 +9,6 @@
     <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.10) 1px, transparent 0); background-size: 50px 50px;"></div>
   </div>
 
-  <!-- Soft Blurred Animated Blobs -->
-  <div class="absolute inset-0 z-0 pointer-events-none">
-    <div class="blob blob1"></div>
-    <div class="blob blob2"></div>
-    <div class="blob blob3"></div>
-  </div>
 
   <!-- Main Content -->
   <div class="relative z-10 flex-1 flex items-center justify-center w-full">
@@ -22,11 +16,6 @@
       <div class="relative grid lg:grid-cols-2 gap-0 lg:gap-8 items-center min-h-[70vh]">
         <!-- Left Column -->
         <div class="flex flex-col justify-center space-y-8 lg:pr-8">
-          <!-- Badge -->
-          <div class="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600/30 via-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-full border border-white/20 shadow-lg w-max">
-            <div class="w-2 h-2 bg-green-400 rounded-full status-pulse"></div>
-            <span class="text-sm font-medium text-white">Open to new opportunities</span>
-          </div>
 
           <!-- Main Heading & Subtitle with Glow and Underline -->
           <div class="space-y-2 relative">
@@ -123,16 +112,6 @@
                 <span class="w-2 h-2 sm:w-3 sm:h-3 bg-green-500 rounded-full inline-block"></span>
               </div>
               <span class="text-xs text-gray-300 font-mono mr-2 sm:mr-4 hidden sm:inline">portfolio.ts</span>
-              <!-- Tech Tabs -->
-              <span class="inline-flex items-center px-1 sm:px-2 py-1 bg-white/10 rounded-md text-xs text-blue-400 font-semibold mr-1 sm:mr-2">
-                <span class="mr-1 hidden sm:inline">⚛️</span> <span class="sm:hidden">⚛️</span>
-              </span>
-              <span class="inline-flex items-center px-1 sm:px-2 py-1 bg-white/10 rounded-md text-xs text-green-400 font-semibold mr-1 sm:mr-2">
-                <span class="mr-1 hidden sm:inline">🟩</span> <span class="sm:hidden">🟩</span>
-              </span>
-              <span class="inline-flex items-center px-1 sm:px-2 py-1 bg-white/10 rounded-md text-xs text-sky-400 font-semibold">
-                <span class="mr-1 hidden sm:inline">🟦</span> <span class="sm:hidden">🟦</span>
-              </span>
             </div>
             <!-- Animated Code Lines with Typing Effect and Glow -->
             <div class="absolute left-0 right-0 top-12 bottom-10 px-3 sm:px-6 py-3 space-y-2 sm:space-y-3 font-mono text-xs sm:text-base z-10 overflow-x-auto overflow-y-auto w-full h-full text-left whitespace-nowrap code-editor-scrollbar">
@@ -151,7 +130,7 @@
             <!-- Status Bar at Bottom of Code Editor -->
             <div class="absolute left-0 right-0 bottom-0 px-6 py-2 flex items-center justify-between bg-black/30 border-t border-white/10 rounded-b-2xl text-xs text-gray-300 z-20">
               <div class="flex items-center gap-2">
-                <span class="status-dot"></span>
+                <span class="w-2 h-2 bg-green-400 rounded-full"></span>
                 <span class="font-semibold text-green-400">LIVE</span>
               </div>
               <div class="flex items-center gap-2">
