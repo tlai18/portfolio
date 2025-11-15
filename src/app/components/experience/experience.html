@@ -1,37 +1,27 @@
-<section id="experience" class="py-24 bg-black text-white relative overflow-hidden">
-  <!-- Minimal Gradient Overlay (gray/white/soft blue, subtle) -->
-  <div class="absolute inset-0 z-0 pointer-events-none">
-    <div class="w-full h-full animate-gradientShift bg-gradient-to-br from-gray-900/50 via-white/10 to-blue-900/20 opacity-30"></div>
-  </div>
-  <!-- Minimal Grid Background (very subtle) -->
-  <div class="absolute inset-0 opacity-5 z-0">
-    <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0); background-size: 50px 50px;"></div>
-  </div>
-  <!-- One Minimal Blob -->
-  <div class="absolute inset-0 z-0 pointer-events-none">
-    <div class="blob blob2" style="opacity:0.12;"></div>
-  </div>
-  <div class="container mx-auto px-6 relative z-10">
-    <div class="section-container fade-in" scrollAnimate>
-      <div class="text-center mb-16">
-        <h2 class="section-title">Experience</h2>
-        <p class="section-subtitle">My professional journey, including research, leadership, and software engineering roles.</p>
+<section id="experience" class="py-24 sm:py-32 md:py-48 bg-gray-50 text-black">
+  <div class="container mx-auto px-6">
+    <div class="max-w-2xl mx-auto fade-in" scrollAnimate>
+      <div class="flex items-center gap-4 sm:gap-8 mb-16 sm:mb-20 md:mb-28">
+        <span class="text-xs text-gray-400 font-light tracking-widest uppercase tabular-nums hidden sm:inline">02</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extralight tracking-tighter">Experience</h2>
+        <div class="w-8 sm:w-16 h-px bg-gray-200"></div>
       </div>
-      <div class="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-10 mb-16">
-        <div *ngFor="let exp of experiences" class="info-card flex flex-col">
-          <div class="flex items-center mb-2">
-            <h3 class="text-lg sm:text-xl font-semibold text-white">{{ exp.position }}</h3>
+      
+      <div class="space-y-16 sm:space-y-20 md:space-y-24">
+        <div *ngFor="let exp of experiences" class="pb-16 sm:pb-20 md:pb-24 last:pb-0 border-l-2 border-gray-200 pl-6 sm:pl-8 md:pl-10 last:border-0 experience-item relative">
+          <div class="mb-6 sm:mb-8 md:mb-10">
+            <h3 class="text-lg sm:text-xl font-extralight mb-3 sm:mb-4 text-black tracking-tight">{{ exp.position }}</h3>
+            <p class="text-gray-500 text-xs sm:text-sm font-light">{{ exp.company }} • {{ exp.period }}</p>
           </div>
-          <div class="text-xs sm:text-sm text-gray-400 mb-2">{{ exp.company }} • {{ exp.period }}</div>
-          <p class="text-sm sm:text-base text-gray-300 mb-4 flex-1">{{ exp.description }}</p>
-          <div class="flex flex-wrap gap-2 mt-2">
-            <span *ngFor="let tech of exp.technologies" class="badge text-xs sm:text-sm">{{ tech }}</span>
+          <p *ngIf="exp.description" class="text-gray-600 mb-8 sm:mb-10 md:mb-12 leading-relaxed font-light text-sm sm:text-base">{{ exp.description }}</p>
+          <div *ngIf="exp.technologies && exp.technologies.length > 0" class="flex flex-wrap gap-2 sm:gap-3">
+            <span *ngFor="let tech of exp.technologies" class="px-3 sm:px-4 py-1.5 sm:py-2 bg-white border border-gray-200 text-xs sm:text-sm text-gray-600 font-light hover:border-gray-400 hover:bg-gray-50 transition-all duration-300">
+              {{ tech }}
+            </span>
           </div>
-          <ul class="list-disc list-inside text-gray-400 mt-4 space-y-1 text-xs sm:text-sm">
-            <li *ngFor="let ach of exp.achievements">{{ ach }}</li>
-          </ul>
         </div>
       </div>
     </div>
   </div>
-</section> 
+</section>

@@ -12,6 +12,14 @@ import { ScrollAnimateDirective } from '../scroll-animate.directive';
 export class ExperienceComponent {
   experiences = [
     {
+      company: 'WEX (Contract)',
+      position: 'Software Development Engineer',
+      period: 'Nov 2025 – Present',
+      description: '',
+      technologies: [],
+      achievements: []
+    },
+    {
       company: 'HCI Lab, Tufts University',
       position: 'Technical Research Assistant',
       period: 'September 2024 - February 2025',
@@ -26,7 +34,7 @@ export class ExperienceComponent {
     },
     {
       company: 'JumboCode, Tufts University',
-      position: 'Technical Lead, The Lantern',
+      position: 'Technical Lead • The Lantern',
       period: 'September 2023 - May 2024',
       description: 'Managed a multi-disciplinary team with Agile methods to deliver user-friendly software applications on a fixed schedule. Led developers\' code reviews thoroughly, ensuring adherence to best practices and alignment with project specifications. Guided the team through all technical and engineering challenges while consistently providing mentorship and resources.',
       technologies: ['Agile Development', 'Team Leadership', 'Code Review', 'Project Management', 'Mentorship'],
@@ -38,8 +46,8 @@ export class ExperienceComponent {
       ]
     },
     {
-      company: 'Aaron\'s Presents',
-      position: 'Front-End Developer',
+      company: 'JumboCode, Tufts University',
+      position: 'Front-End Developer • Aaron\'s Presents',
       period: 'September 2022 - May 2023',
       description: 'Created a mobile application using React Native, collaborating with a diverse team of developers, designers, and clients. Built an interactive platform that effectively allows mentors to manage student data, projects, and events for Aaron\'s Presents, a non-profit dedicated to providing valuable resources to young children with ideas that benefit others.',
       technologies: ['React Native', 'Node.js', 'MongoDB', 'Firebase', 'Mobile Development'],
@@ -51,8 +59,8 @@ export class ExperienceComponent {
       ]
     },
     {
-      company: 'Simply Smiles',
-      position: 'Full-Stack Developer',
+      company: 'JumboCode, Tufts University',
+      position: 'Full-Stack Developer • Simply Smiles',
       period: 'September 2021 - May 2022',
       description: 'Partnered with a skilled team of engineers to successfully develop and deliver a robust, cross-platform web application. Built a comprehensive and advanced digital expense tracking system using the MERN stack for Simply Smiles, a non-profit creating foster home villages where children are raised in supportive communities to achieve their dreams.',
       technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'MERN Stack'],

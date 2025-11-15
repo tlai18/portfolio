@@ -1,50 +1,13 @@
-# Thomas Lai - Software Engineer Portfolio
+# Thomas Lai - Portfolio
 
-A modern, responsive portfolio website built with Angular 20 and Tailwind CSS 4.
-
-## Features
-
-- **Modern Design**: Dark glassmorphic theme with smooth animations
-- **Responsive**: Optimized for all devices (mobile, tablet, desktop)
-- **Fast**: Built with Angular 20 for optimal performance
-- **Accessible**: Follows web accessibility best practices
-- **SEO Ready**: Clean, semantic HTML structure
+A minimal, responsive portfolio website built with Angular 20 and Tailwind CSS 4.
 
 ## Tech Stack
 
-- **Frontend**: Angular 20
-- **Styling**: Tailwind CSS 4
-- **Language**: TypeScript
-- **Build Tool**: Angular CLI
-- **Package Manager**: npm
-
-## Project Structure
-
-```
-src/
-├── app/
-│   ├── components/
-│   │   ├── header/          # Navigation header
-│   │   ├── hero/           # Hero section with intro
-│   │   ├── about/          # About me section
-│   │   ├── skills/         # Technical skills
-│   │   ├── projects/       # Project showcase
-│   │   ├── experience/     # Work experience & education
-│   │   ├── contact/        # Contact information
-│   │   └── footer/         # Footer with social links
-│   ├── app.ts             # Main app component
-│   ├── app.html           # App template
-│   └── app.css            # App styles
-├── styles.css             # Global styles
-└── main.ts               # Application entry point
-```
-
-## Design System
-
-- **Color Palette**: Dark theme with blue, purple, and pink gradients
-- **Typography**: Modern sans-serif fonts with proper hierarchy
-- **Animations**: Smooth transitions and hover effects
-- **Layout**: Glassmorphic cards with backdrop blur effects
+- Angular 20
+- Tailwind CSS 4
+- TypeScript
+- Angular CLI
 
 ## Getting Started
 
@@ -76,49 +39,55 @@ npm start
 ### Build for Production
 
 ```bash
-npm run build
+npm run build:prod
 ```
 
-The build artifacts will be stored in the `dist/` directory.
+The build artifacts will be stored in the `dist/my-project/browser` directory.
 
-## Responsive Breakpoints
+## Project Structure
 
-- **Mobile**: < 768px
-- **Tablet**: 768px - 1024px
-- **Desktop**: > 1024px
+```
+src/
+├── app/
+│   ├── components/
+│   │   ├── header/          # Navigation header
+│   │   ├── hero/            # Hero section
+│   │   ├── about/           # About section
+│   │   ├── experience/     # Work experience
+│   │   ├── projects/       # Project showcase
+│   │   ├── contact/         # Contact information
+│   │   └── footer/          # Footer
+│   ├── services/            # Shared services
+│   ├── app.ts               # Main app component
+│   └── app.html             # App template
+├── assets/                  # Static assets
+└── styles.css               # Global styles
+```
 
 ## Sections
 
-1. **Header**: Navigation with smooth scrolling and mobile menu
-2. **Hero**: Introduction with animated code editor aesthetic
-3. **About**: Personal information and mission statement
-4. **Skills**: Technical skills organized by category
-5. **Projects**: Showcase of recent work and projects
-6. **Experience**: Work history and education background
-7. **Contact**: Contact information and social media links
-8. **Footer**: Copyright and additional social links
+1. Header - Navigation with smooth scrolling and mobile menu
+2. Hero - Introduction and call-to-action
+3. About - Personal information
+4. Experience - Work history and education
+5. Projects - Project showcase
+6. Contact - Contact information and social links
+7. Footer - Copyright information
 
-## 🔧 Customization
+## Customization
 
-### Colors
-Update the color scheme by modifying Tailwind classes in component templates.
+Update component TypeScript files to modify content, projects, and experience.
 
-### Content
-Edit component TypeScript files to update personal information, projects, and experience.
+## Deployment
 
-### Styling
-Modify component CSS files for custom animations and effects.
+The project is configured for deployment on Vercel. See `vercel.json` for configuration details.
 
-## 📄 License
+## License
 
-This project is open source and available under the [MIT License](LICENSE).
+MIT License
 
-## 🤝 Contact
+## Contact
 
-- **Email**: lai.thomas011@gmail.com
-- **LinkedIn**: [Thomas Lai](https://linkedin.com/in/t-lai)
-- **GitHub**: [tlai18](https://github.com/tlai18)
-
----
-
-Built with ❤️ using Angular and Tailwind CSS
+- Email: lai.thomas011@gmail.com
+- LinkedIn: [Thomas Lai](https://linkedin.com/in/t-lai)
+- GitHub: [tlai18](https://github.com/tlai18)
