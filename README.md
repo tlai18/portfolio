@@ -1,6 +1,6 @@
 # Thomas Lai - Portfolio
 
-A minimal, responsive portfolio website built with Angular 20 and Tailwind CSS 4.
+A portfolio website built with Angular 20 and Tailwind CSS 4.
 
 ## Tech Stack
 
@@ -66,8 +66,8 @@ src/
 
 ## Sections
 
-1. Header - Navigation with smooth scrolling and mobile menu
-2. Hero - Introduction and call-to-action
+1. Header - Navigation and mobile menu
+2. Hero - Introduction
 3. About - Personal information
 4. Experience - Work history and education
 5. Projects - Project showcase
