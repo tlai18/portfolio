@@ -15,9 +15,11 @@ export class ExperienceComponent {
       company: 'WEX (Contract)',
       position: 'Software Development Engineer',
       period: 'Nov 2025 – Present',
-      description: '',
-      technologies: [],
-      achievements: []
+      paragraphs: [
+        'Developed a scalable REST API microservice (C#/.NET, SQL) with a 5-person agile team that automates electronic-payment eligibility checks across Optum\'s network of 2.1M+ healthcare providers, replacing a manual review process and supporting a 95% electronic payment delivery rate.',
+        'Extended the admin portal (C#/.NET, SQL) with configurable report settings, reworking report-generation logic and database schema so customers could toggle employer branding and contact details on selected reports.'
+      ],
+      technologies: ['C#', '.NET', 'SQL', 'REST API', 'Agile']
     },
     {
       company: 'HCI Lab, Tufts University',

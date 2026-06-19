@@ -14,6 +14,9 @@
             <h3 class="text-lg sm:text-xl font-extralight mb-3 sm:mb-4 text-black tracking-tight">{{ exp.position }}</h3>
             <p class="text-gray-500 text-xs sm:text-sm font-light">{{ exp.company }} • {{ exp.period }}</p>
           </div>
+          <div *ngIf="exp.paragraphs?.length" class="space-y-4 sm:space-y-6 mb-8 sm:mb-10 md:mb-12">
+            <p *ngFor="let paragraph of exp.paragraphs" class="text-gray-600 leading-relaxed font-light text-sm sm:text-base">{{ paragraph }}</p>
+          </div>
           <p *ngIf="exp.description" class="text-gray-600 mb-8 sm:mb-10 md:mb-12 leading-relaxed font-light text-sm sm:text-base">{{ exp.description }}</p>
           <div *ngIf="exp.technologies && exp.technologies.length > 0" class="flex flex-wrap gap-2 sm:gap-3">
             <span *ngFor="let tech of exp.technologies" class="px-3 sm:px-4 py-1.5 sm:py-2 bg-white border border-gray-200 text-xs sm:text-sm text-gray-600 font-light hover:border-gray-400 hover:bg-gray-50 transition-all duration-300">
