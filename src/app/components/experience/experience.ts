@@ -12,7 +12,7 @@ import { ScrollAnimateDirective } from '../scroll-animate.directive';
 export class ExperienceComponent {
   experiences = [
     {
-      company: 'WEX (Contract)',
+      company: 'WEX',
       position: 'Software Development Engineer',
       period: 'Nov 2025 – Present',
       paragraphs: [
